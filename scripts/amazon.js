@@ -1,8 +1,8 @@
-console.log("hello");
-
+import {cart} from '../data/cart'
+import { products } from '../data/products'
 // let product = [{
 //     image:'images/products/intermediate-composite-basketball.jpg',
-//     name:'Intermediate Size Basketball',
+//     name:'Intermediate Size Basketball'
 //     rating:{
 //         stars:4,
 //         count:127
@@ -106,7 +106,15 @@ document.querySelectorAll('.js-add-to-cart')
       quantity:1
     })
    }
-   
+   let sum=0
+   cart.forEach((i)=>{
+    
+     sum+=i.quantity
+    
+   })
+   document.querySelector('.js-cart-quantity').innerHTML=sum
+   console.log(sum)
   });
-  console.log(cart)
+
+  
 })

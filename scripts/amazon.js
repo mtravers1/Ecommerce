@@ -1,5 +1,5 @@
-import {cart} from '../data/cart'
-import { products } from '../data/products'
+import {cart, addToCart} from '../data/cart.js'
+import { products } from '../data/products.js'
 // let product = [{
 //     image:'images/products/intermediate-composite-basketball.jpg',
 //     name:'Intermediate Size Basketball'
@@ -82,6 +82,40 @@ products.forEach((product)=>{
 
 document.querySelector('.js-products-grid').innerHTML=productHTML;
 
+
+
+
+// const addToCart=(productId)=>{
+//   let matchingitem
+//   cart.forEach((c)=>{
+//     if(c.productId===productId){
+//     matchingitem =c
+//     }
+//    })
+//    if(matchingitem){
+//     matchingitem.quantity+=1
+//    }else{
+//     cart.push({
+//       productId:productId,
+//       // productName:productName,
+//       // productImage:productImage,
+//       // productPrice:productPrice,
+//       quantity:1
+//     })
+//    }
+
+// }
+
+const updateCartQuantity = ()=>{
+  let sum=0
+  cart.forEach((i)=>{
+   
+    sum+=i.quantity
+   
+  })
+  document.querySelector('.js-cart-quantity').innerHTML=sum
+  // console.log(sum)
+}
 document.querySelectorAll('.js-add-to-cart')
 .forEach((button)=>{
   button.addEventListener('click', ()=>{
@@ -89,31 +123,9 @@ document.querySelectorAll('.js-add-to-cart')
     const productName=button.dataset.productName;
     const productImage=button.dataset.productImage;
     const productId=button.dataset.productId
-    let matchingitem
-   cart.forEach((c)=>{
-    if(c.productId===productId){
-    matchingitem =c
-    }
-   })
-   if(matchingitem){
-    matchingitem.quantity+=1
-   }else{
-    cart.push({
-      productId:productId,
-      productName:productName,
-      productImage:productImage,
-      productPrice:productPrice,
-      quantity:1
-    })
-   }
-   let sum=0
-   cart.forEach((i)=>{
-    
-     sum+=i.quantity
-    
-   })
-   document.querySelector('.js-cart-quantity').innerHTML=sum
-   console.log(sum)
+
+    addToCart(productId)
+    updateCartQuantity()
   });
 
   

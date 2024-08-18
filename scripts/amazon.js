@@ -114,7 +114,7 @@ const updateCartQuantity = ()=>{
    
   })
   document.querySelector('.js-cart-quantity').innerHTML=sum
-  // console.log(sum)
+  console.log(sum)
 }
 document.querySelectorAll('.js-add-to-cart')
 .forEach((button)=>{

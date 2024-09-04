@@ -1,7 +1,29 @@
 .main {
   margin-top: 60px;
 }
+#m{
+  position: absolute;
+    background: white;
+    height: -webkit-fill-available;
+}
+#m ul{
+list-style: none;
+}
 
+#m li{
+  padding:5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#nav{
+  cursor: pointer;
+}
+
+#m button{
+  background:none;
+  border:none;
+  font-weight: 600;
+}
 .products-grid {
   display: grid;
 

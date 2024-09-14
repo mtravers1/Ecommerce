@@ -7,7 +7,7 @@
       (Responsive design = make the website look good on
       smaller screen sizes like a phone or a tablet). -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <link rel="stylesheet" href="./styles/pages/home.css"
     <!-- Load a font called Roboto from Google Fonts. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,45 +19,156 @@
     <link rel="stylesheet" href="styles/pages/amazon.css">
   </head>
   <body>
+    <div>
+      <div id="mobile">
+          <div >
+            <button id="navbutton">Ecommerce</button>
+            <div id="mobilenav"></div>
 
-    <div id="menu"></div>
-    <div class="amazon-header">
-      
-      <div class="amazon-header-left-section">
-        <div>
-          <h3 id="nav"> Ecommerce</h3>
+          </div>
           
-        </div>
+            <div class="login" >
+              <div>
+    
+              <a href="#">
+                <!-- <img class="log" src="images/icons/login.png"> -->
+                <h3>Login</h3>
+      
+              </a>
+            </div>
+    
+              <div id="cart">
+                <a class="cart-link header-link" href="checkout.html">
+                  <img class="cart-icon" src="images/icons/cart-icon.png">
+                  <div class="cart-quantity js-cart-quantity">0</div>
+                  <div class="cart-text">Cart</div>
+                </a>
+               </div>
 
-        <a href="index.html" class="header-link">
-          <!-- <h3 style="color:white">Ecommerce</h3> -->
-        </a>
+    
+            </div>
+    
+
       </div>
-     
-      <div class="amazon-header-middle-section">
-        <input class="search-bar" type="text" placeholder="Search">
+    
+      <div id="header">
+        <!-- <div > -->
+          <div id="logo">
+              <h2>Ecommerce</h2>
+          </div>
+          <div id="menu">
+              <ul>
+                  <li>
+                      <a>Home</a>
+                  </li>
+                  <li>
+                      <a>Browse All</a>
+                  </li>
+                  <li>
+                      <a>About</a>
+                  </li>
+                  <li>
+                      <p id="categories">Categories</p>
+                      <div id="submenu">
 
-        <button class="search-button">
-          <img class="search-icon" src="images/icons/search-icon.png">
-        </button>
-      </div>
-
-      <div class="amazon-header-right-section">
+                      </div>
+                  </li>
+                  <li>
+                      <p>Contact</p>
+                  </li>
+              </ul>
+          </div>
+          
+              <div id="search">
+                <div class="amazon-header-middle-section">
+                  <input class="search-bar" type="text" placeholder="Search">
+          
+                  <button class="search-button">
+                    <img class="search-icon" src="images/icons/search-icon.png">
+                  </button>
+                  </div>
+                </div>                
+          
+              
+                 
+      <!-- <div class="amazon-header-right-section"> -->
         <!-- <a class="orders-link header-link" href="orders.html">
           <span class="returns-text">Returns</span>
           <span class="orders-text">& Orders</span>
         </a> -->
+        
 
-        <a class="cart-link header-link" href="checkout.html">
-          <img class="cart-icon" src="images/icons/cart-icon.png">
-          <div class="cart-quantity js-cart-quantity">0</div>
-          <div class="cart-text">Cart</div>
-        </a>
+      
+      <!-- </div> -->
+      
+          <div class="login" >
+            <div>
+
+            <a href="#">
+              <!-- <img class="log" src="images/icons/login.png"> -->
+              <h3>Login</h3>
+    
+            </a>
+          </div>
+
+            <div id="cart">
+              <a class="cart-link header-link" href="checkout.html">
+                <img class="cart-icon" src="images/icons/cart-icon.png">
+                <div class="cart-quantity js-cart-quantity">0</div>
+                <div class="cart-text">Cart</div>
+              </a>
+             </div>
+  
+          </div>
+
+       
+          
       </div>
-    </div>
+    <!-- </div> -->
+
+
+
+
+
+      <div>
+          <div class="featured-items">
+              <h4 >Featured Items</h4>
+
+          </div>
+          <div id="slider">
+              <figure>
+                  <span>
+                      <img id="img" src=""/>
+                      
+                  </span>
+                  <img id="img"src=""/>
+                  <img id="img" src=""/>
+                  <img id="img" src=""/>
+                  <img id="img" src=""/>
+
+
+                 
+
+
+              </figure>
+              <style>
+                
+              </style>
+
+      
+          
+      </div>
+      
+  </div>
+  
+      
+     
+     
+  
     
     <div class="main">
       <!-- <div id="menu"></div> -->
+      <h3 style="text-align: center; background-color: aqua;">Browse All</h3>
 
       <div class="products-grid js-products-grid">
         <!-- <div class="product-container"> -->
@@ -209,13 +320,32 @@
       <!-- </div> -->
     </div>
     <script>
-      let nav=document.querySelector('#nav')
-      let t=false
+      let nav=document.querySelector('#navbutton')
+      nav.addEventListener('click', ()=>{
+        document.querySelector('#mobilenav').innerHTML= `
+        <div>
+          <ul>
+            <li>
+              Browse All
+            <li>
+              <li>
+              Categories
+            <li>
+              <li>
+                Deals
+              </li>
 
-nav.addEventListener('click', ()=>{
-  
- 
-    document.querySelector('#menu').innerHTML=
+
+          </ul>
+        </div>
+        `
+      })
+    </script>
+    <script>
+      let cat=document.querySelector('#categories')
+cat.addEventListener('click', ()=>{
+ console.log('clicked')
+    document.querySelector('#submenu').innerHTML=
     `
     <div id='m'>
       <ul>
@@ -223,17 +353,24 @@ nav.addEventListener('click', ()=>{
       Home
     </li>
     <li>
-    <button id='cat'>
-      Category
-    </button>
-    <span id='c'>
+      Clothes
+    <span class="c">
       <span>
     </li>
     <li>
-      Deals
+      <a href="">Sneakers</a>
     </li>
     <li>
-      <a href='contact.html'>Contact</a>
+      <a href=''>Electronics</a>
+    </li>
+    <li>
+      <a href=''>Sports</a>
+    </li>
+    <li>
+      <a href=''>Nutrition</a>
+    </li>
+    <li>
+      <a href=''>Video Games</a>
     </li>
 
 
@@ -242,36 +379,44 @@ nav.addEventListener('click', ()=>{
     </div>
     
     `
+
+    let cat= document.querySelector('.cat')
+     
+     cat.addEventListener('click', ()=>{
+      document.querySelector('.c').innerHTML=`
+      <div>
+        <ul>
+          <li>
+            Fashion
+          </li>
+          <li>
+            Electronics
+          </li>
+          <li>
+            Other
+          </li>
+  
+        </ul>
+  
+      <div>
+  
+      `
+      })
+      
   
  
     
 
 })
+
     </script>
     <script>
 
       let cate = ()=>{
         console.log('clicking')
       }
-      document.querySelector('#cat').addEventListener('click', cate)
-      // document.querySelector('#c').innerHTML=`
-      // <div>
-      //   <ul>
-      //     <li>
-      //       Fashion
-      //     </li>
-      //     <li>
-      //       Electronics
-      //     </li>
-      //     <li>
-      //       Other
-      //     </li>
-  
-      //   </ul>
-  
-      // <div>
-  
-      // `
+    
+
     
       </script>
     <!-- <script type="module" src="./data/cart.js"></script>
@@ -279,5 +424,6 @@ nav.addEventListener('click', ()=>{
     <script type="module" src="./scripts/amazon.js"></script>
     <script src="./scripts/checkout.js"></script>
     <script type="module" scr="./scripts/nav.js"></script>
+  </div>
   </body>
 </html>

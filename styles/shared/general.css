@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto, Arial;
+  font-family: "Josefin Sans", sans-serif;
   color: rgb(33, 33, 33);
   /* The <body> element has a default margin of 8px
      on all sides. This removes the default margins. */
@@ -26,21 +26,23 @@ input, select, button {
 
 .button-primary {
   color: rgb(33, 33, 33);
-  background-color: rgb(255, 216, 20);
-  border: 1px solid rgb(252, 210, 0);
-  border-radius: 8px;
+  background-color: rgb(128, 0, 32);
+  border: 1px solid rgb(128, 0, 32);
+  border-radius: 2px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  font-weight: bolder;
+  color: white;
 }
 
 .button-primary:hover {
-  background-color: rgb(247, 202, 0);
-  border: 1px solid rgb(242, 194, 0);
+  background-color: rgb(24, 202, 0);
+  border: 1px solid rgb(24, 194, 0);
 }
 
 .button-primary:active {
-  background: rgb(255, 216, 20);
-  border-color: rgb(252, 210, 0);
+  background: rgb(25, 216, 20);
+  border-color: rgb(25, 210, 0);
   box-shadow: none;
 }
 

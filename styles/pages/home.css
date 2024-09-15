@@ -32,6 +32,8 @@
 }
 #menu ul li a{
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 #menu ul li a:hover{
     color:brown
@@ -48,7 +50,7 @@
 #slider{
     width:90%;
     margin: 50px auto;
-    position: relative;
+    /* position: relative; */
     box-shadow: 0px 0px 10px 3px grey;
     /* overflow: auto; */
     overflow: auto;
@@ -59,7 +61,7 @@
 #slider figure{
     margin:0px;
     position:relative;
-    /* width:200%; */
+    width:200%;
     left:0px;
     transition: .5s, ease-in-out;
 }
@@ -75,11 +77,13 @@
 }
 
 .slider figure{
-    height: 200px
+    height: 300px
 }
 #mobile{
     display: none;
 }
+
+
 
 @media(max-width:600px){
     #header{
@@ -92,5 +96,17 @@
         align-items: center;
         background-color: aqua;
 
+    }
+    #mobilenav{
+        background: white;
+        position: absolute;
+    }
+    #mobilenav ul{
+        list-style: none;
+        padding: 0px;
+    }
+    #mobilenav ul li{
+        padding:10px;
+        font-size: 24px;
     }
 }

@@ -1,0 +1,17 @@
+#main{
+    display: flex;
+    flex-direction: column;
+    margin-right:20px
+}
+#slide{
+    display: flex;
+}
+.product-image-slider{
+    height: 150px;
+    align-items: center;
+    display: flex;
+}
+.itemname{
+    text-align: center;
+    font-size: 14px;
+}

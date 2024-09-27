@@ -1,8 +1,17 @@
 .main {
-}
+  
+  background: linear-gradient(0.5turn, #4A4A4A,  #898888, FEFAFA );}
 .main-slide{
   margin-right: 60px;
 
+}
+
+#headerbutton{
+  background: grey;
+  border-radius: 20px;
+  font-weight: 900;
+  font-size: 23px;
+  padding: 11px;
 }
 #m{
   display: flex;
@@ -78,6 +87,136 @@ text-decoration: none;
   width: 30%;
 }
 
+
+
+#middle{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top:50px;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#middle span{
+  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#middle img{
+  width: 10%;
+}
+
+#bottom{
+  display: flex;
+  margin: 50px;
+    justify-content: center;
+}
+
+#left{
+  width: 66%;
+
+}
+
+#row1{
+  display: flex;
+  width: 100%;
+}
+
+#box1{
+
+  width: 50%;
+  background-image:url("/images/box1.jpg");
+  background-size: cover;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 34px;
+  height: 150px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+
+
+}
+
+#box4{
+  background-image:url("/images/box4.jpg");
+  background-size: cover;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 34px;
+  height: 140px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  background-position: center;
+
+
+}
+
+#box2{
+  background-image:url("/images/box2.jpg");
+  background-size: cover;
+  width: 50%;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 34px;
+  height: 150px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+
+
+}
+
+#right{
+  width: 33%;
+  height: 400px;
+  background-color: green;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 34px;
+  background-image: url(/images/box3.jpg);
+  background-size: contain;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+
+}
+
+#bl{
+  border-right: 1px solid black;
+}
+footer{
+  background-color: black;
+}
+footer ul{
+   list-style: none;
+}
+
+footer li{
+  padding:10px;
+  
+  color: white;
+}
 /* @media is used to create responsive design (making the
    website look good on any screen size). This @media
    means when the screen width is 2000px or less, we
@@ -120,6 +259,25 @@ text-decoration: none;
     align-items: center;
     padding-right: 20px;
     width: 20%;
+
+}
+#bottom{
+  flex-direction: column;
+    margin: 20px;
+}
+
+#left{
+  width: 100%;
+}
+
+#row1{
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#right{
+  width: 50%;
 }
 }
 @media (max-width: 575px) {

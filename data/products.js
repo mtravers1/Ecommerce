@@ -1,4 +1,4 @@
-export const products = [
+const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -12,7 +12,8 @@ export const products = [
       "socks",
       "sports",
       "apparel"
-    ]
+    ],
+    categories:1
   },
   {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
@@ -26,8 +27,88 @@ export const products = [
     keywords: [
       "sports",
       "basketballs"
-    ]
+    ],
+    categories:3
   },
+  {
+              id: 1,
+              image: '../images/products/gg-2.jpg',
+              title: 'Z Flip Foldable Mobile',
+              price: 120,
+              category: 'mobile',
+              categories: 5
+
+          },
+          {
+              id: 5,
+              image: 'images/products/hh-2.jpg',
+              title: 'Air Pods Pro',
+              price: 60,
+              category: 'airpods',
+              categories: 5
+
+          },
+          {
+              id: 3,
+              image: 'images/products/ee-3.jpg',
+              title: '250D DSLR Camera',
+              price: 230,
+              category: 'cameras',
+              categories: 5
+
+          },
+          {
+              id: 1,
+              image: 'images/products/gg-2.jpg',
+              title: 'Foldable Mobile',
+              price: 300,
+              categories: 5
+
+          },
+          {
+              id: 5,
+              image: 'images/products/hh-3.jpg',
+              title: 'Air Pods Pro',
+              price: 65,
+              categories: 5
+          },
+          {
+              id: 3,
+              image: 'images/products/ee-2.jpg',
+              title: 'DSLR Camera',
+              price: 200,
+              categories: 'cameras'
+          },
+          {
+              id: 4,
+              image: 'images/products/dd-2.jpg',
+              title: 'Laptop',
+              price: 100,
+              categories: 'Laptop'
+          },
+          {
+              id: 1,
+              image: 'images/products/gg-3.jpg',
+              title: 'Mobile',
+              price: 350,
+              categories:5
+          },
+          {
+              id: 3,
+              image: 'images/products/ee-1.jpg',
+              title: 'DSLR Camera',
+              price: 130,
+              categories: 5
+          },
+          {
+              id: 5,
+              image: 'images/products/hh-1.jpg',
+              title: 'Air Pods',
+              price: 85,
+              categories: 5
+              
+  },
+
   {
     id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
     image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
@@ -42,6 +123,7 @@ export const products = [
       "apparel",
       "mens"
     ],
+    categories:1,
     type: "clothing",
     sizeChartLink: "images/clothing-size-chart.png"
   },
@@ -58,7 +140,8 @@ export const products = [
       "toaster",
       "kitchen",
       "appliances"
-    ]
+    ],
+    categories:2,
   },
   {
     id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
@@ -72,8 +155,10 @@ export const products = [
     keywords: [
       "plates",
       "kitchen",
-      "dining"
-    ]
+      "dining",
+      "appliances"
+    ],
+    categories:2
   },
   {
     id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
@@ -87,7 +172,8 @@ export const products = [
     keywords: [
       "kitchen",
       "cookware"
-    ]
+    ],
+    categories:2
   },
   {
     id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
@@ -102,7 +188,8 @@ export const products = [
       "hoodies",
       "sweaters",
       "apparel"
-    ]
+    ],
+    categories:1
   },
   {
     id: "77919bbe-0e56-475b-adde-4f24dfed3a04",
@@ -119,7 +206,8 @@ export const products = [
       "restroom",
       "towels",
       "bath towels"
-    ]
+    ],
+    categories:2
   },
   {
     id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
@@ -132,8 +220,10 @@ export const products = [
     priceCents: 2899,
     keywords: [
       "bathroom",
-      "cleaning"
-    ]
+      "cleaning",
+      "appliances"
+    ],
+    categories:2
   },
   {
     id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
@@ -148,7 +238,8 @@ export const products = [
       "shoes",
       "running shoes",
       "footwear"
-    ]
+    ],
+    categories:1
   },
   {
     id: "5968897c-4d27-4872-89f6-5bcb052746d7",
@@ -167,7 +258,8 @@ export const products = [
       "apparel"
     ],
     type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    sizeChartLink: "images/clothing-size-chart.png",
+    categories:1
   },
   {
     id: "aad29d11-ea98-41ee-9285-b916638cac4a",
@@ -181,7 +273,8 @@ export const products = [
     keywords: [
       "accessories",
       "shades"
-    ]
+    ],
+    categories:4
   },
   {
     id: "04701903-bc79-49c6-bc11-1af7e3651358",
@@ -198,7 +291,8 @@ export const products = [
       "womens",
       "beach",
       "summer"
-    ]
+    ],
+    categories:1
   },
   {
     id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
@@ -213,7 +307,8 @@ export const products = [
       "bedroom",
       "curtains",
       "home"
-    ]
+    ],
+    categories:2
   },
   {
     id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
@@ -228,7 +323,8 @@ export const products = [
       "shorts",
       "apparel",
       "mens"
-    ]
+    ],
+    categories:1
   },
   {
     id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
@@ -243,7 +339,8 @@ export const products = [
       "water boiler",
       "appliances",
       "kitchen"
-    ]
+    ],
+    categories:2
   },
   {
     id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
@@ -276,7 +373,8 @@ export const products = [
       "straw hats",
       "summer",
       "apparel"
-    ]
+    ],
+    categories:1
   },
   {
     id: "e4f64a65-1377-42bc-89a5-e572d19252e2",
@@ -291,7 +389,8 @@ export const products = [
       "jewelry",
       "accessories",
       "womens"
-    ]
+    ],
+    categories:4
   },
   {
     id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
@@ -310,7 +409,8 @@ export const products = [
       "apparel"
     ],
     type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    sizeChartLink: "images/clothing-size-chart.png",
+    categories:1,
   },
   {
     id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
@@ -325,7 +425,8 @@ export const products = [
       "bathmat",
       "bathroom",
       "home"
-    ]
+    ],
+    categories:2
   },
   {
     id: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
@@ -341,7 +442,8 @@ export const products = [
       "flats",
       "womens",
       "footwear"
-    ]
+    ],
+    categories:1
   },
   {
     id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
@@ -358,6 +460,7 @@ export const products = [
       "apparel",
       "mens"
     ],
+    categories:1,
     type: "clothing",
     sizeChartLink: "images/clothing-size-chart.png"
   },
@@ -375,7 +478,8 @@ export const products = [
       "bins",
       "cans",
       "kitchen"
-    ]
+    ],
+    categories:1
   },
   {
     id: "19c6a64a-5463-4d45-9af8-e41140a4100c",
@@ -392,7 +496,8 @@ export const products = [
       "sheets",
       "covers",
       "home"
-    ]
+    ],
+    categories:2
   },
   {
     id: "d2785924-743d-49b3-8f03-ec258e640503",
@@ -410,7 +515,8 @@ export const products = [
       "tuques",
       "apparel",
       "womens"
-    ]
+    ],
+    categories:1,
   },
   {
     id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
@@ -425,7 +531,8 @@ export const products = [
       "pants",
       "apparel",
       "mens"
-    ]
+    ],
+    categories:1,
   },
   {
     id: "1c079479-8586-494f-ab53-219325432536",
@@ -487,7 +594,8 @@ export const products = [
       "washroom",
       "mirrors",
       "home"
-    ]
+    ],
+    categories:2
   },
   {
     id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
@@ -504,7 +612,8 @@ export const products = [
       "jogging",
       "apparel",
       "womens"
-    ]
+    ],
+    categories:1
   },
   {
     id: "d339adf3-e004-4c20-a120-40e8874c66cb",
@@ -548,7 +657,8 @@ export const products = [
       "coffeemakers",
       "kitchen",
       "appliances"
-    ]
+    ],
+    categories:2
   },
   {
     id: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
@@ -562,7 +672,8 @@ export const products = [
     keywords: [
       "bedroom",
       "home"
-    ]
+    ],
+    categories:2
   },
   {
     id: "8a53b080-6d40-4a65-ab26-b24ecf700bce",
@@ -577,7 +688,8 @@ export const products = [
       "bathroom",
       "home",
       "towels"
-    ]
+    ],
+    categories:2
   },
   {
     id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
@@ -608,7 +720,8 @@ export const products = [
       "food blenders",
       "kitchen",
       "appliances"
-    ]
+    ],
+    categories:2
   },
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
@@ -655,6 +768,111 @@ export const products = [
       "hoodies",
       "apparel",
       "mens"
-    ]
+    ],
+    categories:1
   }
 ];
+
+
+
+          const filters = [...new Set(btns.map((btn)=>
+          {return btn}))]
+
+          document.getElementById('btns').innerHTML=filters.map((btn)=>{
+              var {name, id} = btn;
+              console.log(name, id)
+              return(
+                  "<button class='fil-p' onclick='filterItems("+(id)+`)'>${name}</button>`
+              )
+          }).join('');
+
+
+      const product = [
+          {
+              id: 1,
+              image: '/images/products/ee-2.jpg',
+              title: 'Z Flip Foldable Mobile',
+              price: 120,
+              category: 'mobile',
+              categories:5
+          },
+          {
+              id: 5,
+              image: 'images/products/ee-1.jpg',
+              title: 'Air Pods Pro',
+              price: 60,
+              category: 'airpods',
+              categories:5
+
+          },
+          {
+              id: 3,
+              image: '/images/products/ee-1.jpg',
+              title: '250D DSLR Camera',
+              price: 230,
+              category: 'cameras',
+              categories:5
+
+          },
+          {
+              id: 1,
+              image: '../images/products/ff-2.jpg',
+              title: 'Foldable Mobile',
+              price: 300,
+              categories:5
+
+          },
+          {
+              id: 5,
+              image: 'images/products/ee-2.jpg',
+              title: 'Air Pods Pro',
+              price: 65,
+              category: 'airpods',
+              categories:5
+
+          },
+          {
+              id: 3,
+              image: './images/products/p6.jpg',
+              title: 'DSLR Camera',
+              price: 200,
+              category: 'cameras',
+              categories:5
+
+          },
+          {
+              id: 4,
+              image: './images/products/p7.jpg',
+              title: 'Laptop',
+              price: 100,
+              category: 'Laptop',
+              categories:5
+
+          },
+          {
+              id: 1,
+              image: './images/products/p4.jpg',
+              title: 'Mobile',
+              price: 350,
+              categories:5
+
+          },
+          {
+              id: 3,
+              image: "images/products/p1.jpg",
+              title: 'DSLR Camera',
+              price: 130,
+              category: 'cameras',
+              categories:5
+
+          },
+          {
+              id: 5,
+              image: '/images/products/p1.jpg',
+              title: 'Air Pods',
+              price: 85,
+              category: 'airpods',
+              categories:5
+
+          },
+      ];

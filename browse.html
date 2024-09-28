@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="stylesheet" href="./styles/pages/slider.css"
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" href="./styles/pages/home.css"
@@ -14,92 +16,9 @@
         <link rel="stylesheet" href="styles/shared/general.css">
         <link rel="stylesheet" href="styles/shared/amazon-header.css">
         <link rel="stylesheet" href="styles/pages/amazon.css">
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'poppins', sans-serif;
-            }
-            .container{
-                display: flex;
-                flex-direction: column;
-            }
-           
-            
-            .filter{
-                margin-top: 50px;
-                padding: 30px 40px;
-            }
-            .filter h3{
-                margin-bottom: 30px;
-            }
-            .contant{
-                /* width: 75%; */
-                right: 0;
-            }
-         
-            .fil-p{
-                padding: 15px 15px;
-                background-color: white;
-                margin: 7px 0;
-                cursor: pointer;
-                color: #333;
-                text-align: justify;
-            }
-            .fil-p:hover{
-                color: orangered;
-                background-color: #aaa;
-            }
-            #root{
-                width: 100%;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr) ;
-                grid-gap: 20px;
-                padding: 30px;
-            }
-            .box{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                border: 1px solid #ddd;
-                padding: 15px;
-            }
-            .box>h3{
-                margin-bottom: 20px;
-            }
-            .img-box{
-                width: 100%;
-                height: 180px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .images{
-                max-height: 90%;
-                max-width: 90%;
-                object-fit: cover;
-                object-position: center;
-            }
-            .bottom{
-                margin-top: 20px;
-                width: 100%;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                height: 70px;
-            }
-            h2{
-                font-size: 20px;
-                color: red;
-            }
-            button:hover{
-                background-color: #333;
-            }
-        </style>
+        <link rel="stylesheet" href="styles/pages/filter.css">
+
+      
     </head>
     <body>
         <div id="mobile">
@@ -217,12 +136,78 @@
 
 
             </figure>
-            <style>
-              
-            </style>
+           
 
     
         
+    </div>
+    <div>
+      <button  id="catbutton">categories</button ><button onClick="showOrHide()">X</button>
+      <div >
+
+      </div>
+      <div id="cate">
+
+      </div>
+      <script>
+      let nav=document.querySelector('#navbutton')
+      nav.addEventListener('click', ()=>{
+        document.querySelector('#mobilenav').innerHTML= `
+        <div>
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+                  <a href="./browse.html">Browse All</a>
+            <li>
+            
+              <li>
+                Deals
+              </li>
+
+
+          </ul>
+        </div>
+        `
+      })
+    </script>
+      </script>
+      <script>
+        let toggle=false
+        const dib=document.querySelector('#cate')
+
+
+let showOrHide=()=>{
+  if(toggle){
+    dib.style.dislay='block'
+    toggle=false
+  }
+  else{
+    dib.style.display='none'
+    toggle=true
+  }
+  console.log(toggle)
+}
+      </script>
+      <script>          
+      
+        document.querySelector('#catbutton').addEventListener('click',()=>{
+          const dib=document.querySelector('#cate')
+          
+
+          const filters = [...new Set(btns.map((btn)=>
+            {return btn}))]
+
+            document.getElementById('cate').innerHTML=filters.map((btn)=>{
+                var {name, id} = btn;
+                console.log(name, id)
+                return(
+                    "<button class='fil-p' onclick='filterItems("+(id)+`)'>${name}</button>`
+                )
+            }).join('');
+        })
+     </script>
     </div>
         
 
@@ -240,6 +225,7 @@
             </div>
        
         </div>
+        
 
         <script>
             
@@ -301,78 +287,119 @@
     {
                 id: 1,
                 image: '../images/products/gg-2.jpg',
-                title: 'Z Flip Foldable Mobile',
-                price: 120,
+                name: 'Z Flip Foldable Mobile',
+                priceCents: 120,
                 category: 'mobile',
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories: 5
 
             },
             {
                 id: 5,
                 image: 'images/products/hh-2.jpg',
-                title: 'Air Pods Pro',
-                price: 60,
+                name: 'Air Pods Pro',
+                priceCents: 60,
                 category: 'airpods',
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories: 5
 
             },
             {
                 id: 3,
                 image: 'images/products/ee-3.jpg',
-                title: '250D DSLR Camera',
-                price: 230,
+                name: '250D DSLR Camera',
+                priceCents: 230,
                 category: 'cameras',
+
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories: 5
 
             },
             {
                 id: 1,
                 image: 'images/products/gg-2.jpg',
-                title: 'Foldable Mobile',
-                price: 300,
-                categories: 5
+                name: 'Foldable Mobile',
+                priceCents: 300,
+                categories: 5,
+                rating: {
+        stars: 4,
+        count: 127
+      }
 
             },
             {
                 id: 5,
                 image: 'images/products/hh-3.jpg',
-                title: 'Air Pods Pro',
-                price: 65,
-                categories: 5
+                name: 'Air Pods Pro',
+                priceCents: 65,
+                categories: 5,
+                rating: {
+        stars: 4,
+        count: 127
+      },
             },
             {
                 id: 3,
                 image: 'images/products/ee-2.jpg',
-                title: 'DSLR Camera',
-                price: 200,
+                name: 'DSLR Camera',
+                priceCents: 200,
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories: 'cameras'
             },
             {
                 id: 4,
                 image: 'images/products/dd-2.jpg',
-                title: 'Laptop',
-                price: 100,
+                name: 'Laptop',
+                priceCents: 100,
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories: 'Laptop'
             },
             {
                 id: 1,
                 image: 'images/products/gg-3.jpg',
-                title: 'Mobile',
-                price: 350,
+                name: 'Mobile',
+                priceCents: 350,
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories:5
             },
             {
                 id: 3,
                 image: 'images/products/ee-1.jpg',
-                title: 'DSLR Camera',
-                price: 130,
+                name: 'DSLR Camera',
+                priceCents: 130,
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories: 5
             },
             {
                 id: 5,
                 image: 'images/products/hh-1.jpg',
-                title: 'Air Pods',
-                price: 85,
+                name: 'Air Pods',
+                priceCents: 85,
+                rating: {
+        stars: 4,
+        count: 127
+      },
                 categories: 5
                 
     },
@@ -1049,7 +1076,7 @@
             {
                 id: 1,
                 image: '/images/products/ee-2.jpg',
-                title: 'Z Flip Foldable Mobile',
+                name: 'Z Flip Foldable Mobile',
                 price: 120,
                 category: 'mobile',
                 categories:5
@@ -1057,7 +1084,7 @@
             {
                 id: 5,
                 image: 'images/products/ee-1.jpg',
-                title: 'Air Pods Pro',
+                name: 'Air Pods Pro',
                 price: 60,
                 category: 'airpods',
                 categories:5
@@ -1066,7 +1093,7 @@
             {
                 id: 3,
                 image: '/images/products/ee-1.jpg',
-                title: '250D DSLR Camera',
+                name: '250D DSLR Camera',
                 price: 230,
                 category: 'cameras',
                 categories:5
@@ -1075,7 +1102,7 @@
             {
                 id: 1,
                 image: '../images/products/ff-2.jpg',
-                title: 'Foldable Mobile',
+                name: 'Foldable Mobile',
                 price: 300,
                 categories:5
 
@@ -1083,7 +1110,7 @@
             {
                 id: 5,
                 image: 'images/products/ee-2.jpg',
-                title: 'Air Pods Pro',
+                name: 'Air Pods Pro',
                 price: 65,
                 category: 'airpods',
                 categories:5
@@ -1092,7 +1119,7 @@
             {
                 id: 3,
                 image: './images/products/p6.jpg',
-                title: 'DSLR Camera',
+                name: 'DSLR Camera',
                 price: 200,
                 category: 'cameras',
                 categories:5
@@ -1101,7 +1128,7 @@
             {
                 id: 4,
                 image: './images/products/p7.jpg',
-                title: 'Laptop',
+                name: 'Laptop',
                 price: 100,
                 category: 'Laptop',
                 categories:5
@@ -1110,7 +1137,7 @@
             {
                 id: 1,
                 image: './images/products/p4.jpg',
-                title: 'Mobile',
+                name: 'Mobile',
                 price: 350,
                 categories:5
 
@@ -1118,7 +1145,7 @@
             {
                 id: 3,
                 image: "images/products/p1.jpg",
-                title: 'DSLR Camera',
+                name: 'DSLR Camera',
                 price: 130,
                 category: 'cameras',
                 categories:5
@@ -1127,7 +1154,7 @@
             {
                 id: 5,
                 image: '/images/products/p1.jpg',
-                title: 'Air Pods',
+                name: 'Air Pods',
                 price: 85,
                 category: 'airpods',
                 categories:5
@@ -1135,16 +1162,7 @@
             },
         ];
         
-            const filters = [...new Set(btns.map((btn)=>
-            {return btn}))]
-
-            document.getElementById('btns').innerHTML=filters.map((btn)=>{
-                var {name, id} = btn;
-                console.log(name, id)
-                return(
-                    "<button class='fil-p' onclick='filterItems("+(id)+`)'>${name}</button>`
-                )
-            }).join('');
+           
         
         const categories = [...new Set(products.map((item)=>
         {return item}))]
@@ -1165,18 +1183,58 @@
         const displayItem = (items) => {
             document.getElementById('root').innerHTML = items.map((item)=>
             {
-            var {image, title, price} = item;
             return(
-            `<div class='box'>
-                <h3>${title}</h3>
-                    <div class='img-box'>
-                        <img class='images' src=${image}></img>
-                    </div> 
-                    <div class='bottom'>
-                        <h2>$ ${price}.00</h2>
-                        <button>Add to cart</button>
-                    </div>
-                </div>`)
+            `
+              <div>
+     <div class="product-container">
+    <div class="product-image-container">
+      <img class="product-image"
+        src="${item.image}">
+    </div>
+
+    <div class="product-name limit-text-to-2-lines">
+      ${item.name}
+    </div>
+
+    <div class="product-rating-container">
+      <img class="product-rating-stars"
+        src="images/ratings/rating-${item.rating.stars *10}.png">
+      <div class="product-rating-count link-primary">
+        ${item.rating.count}
+      </div>
+    </div>
+
+    <div class="product-price">
+      $ ${(item.priceCents / 100).toFixed(2)}
+    </div>
+    <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id=${item.id} data-product-price="${(product.priceCents/100).toFixed(2)}" data-product-name="${product.name}" data-product-image="${product.image}">
+            Add to Cart
+          </button>
+        </div>
+        </div>
+                `)
             }).join('');
         };
         displayItem(categories);

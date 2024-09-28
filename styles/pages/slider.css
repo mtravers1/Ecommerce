@@ -5,11 +5,13 @@
 }
 #slide{
     display: flex;
+    background-color: white;
 }
 .product-image-slider{
     height: 150px;
     align-items: center;
     display: flex;
+    justify-content: center;
 }
 .itemname{
     text-align: center;

@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -34,8 +34,12 @@ const products = [
               id: 1,
               image: '../images/products/gg-2.jpg',
               title: 'Z Flip Foldable Mobile',
-              price: 120,
+              priceCents: 120,
               category: 'mobile',
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
               categories: 5
 
           },
@@ -43,17 +47,25 @@ const products = [
               id: 5,
               image: 'images/products/hh-2.jpg',
               title: 'Air Pods Pro',
-              price: 60,
+              priceCents: 60,
               category: 'airpods',
-              categories: 5
+              categories: 5,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
 
           },
           {
               id: 3,
               image: 'images/products/ee-3.jpg',
               title: '250D DSLR Camera',
-              price: 230,
+              priceCents: 230,
               category: 'cameras',
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
               categories: 5
 
           },
@@ -61,7 +73,11 @@ const products = [
               id: 1,
               image: 'images/products/gg-2.jpg',
               title: 'Foldable Mobile',
-              price: 300,
+              priceCents: 300,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
               categories: 5
 
           },
@@ -69,42 +85,66 @@ const products = [
               id: 5,
               image: 'images/products/hh-3.jpg',
               title: 'Air Pods Pro',
-              price: 65,
+              priceCents: 65,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
               categories: 5
           },
           {
               id: 3,
               image: 'images/products/ee-2.jpg',
               title: 'DSLR Camera',
-              price: 200,
-              categories: 'cameras'
+              priceCents: 200,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
+              categories: 5
           },
           {
               id: 4,
               image: 'images/products/dd-2.jpg',
               title: 'Laptop',
-              price: 100,
-              categories: 'Laptop'
+              priceCents: 100,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
+              categories: 5
           },
           {
               id: 1,
               image: 'images/products/gg-3.jpg',
               title: 'Mobile',
-              price: 350,
+              priceCents: 350,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
               categories:5
           },
           {
               id: 3,
               image: 'images/products/ee-1.jpg',
               title: 'DSLR Camera',
-              price: 130,
+              priceCents: 130,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
               categories: 5
           },
           {
               id: 5,
               image: 'images/products/hh-1.jpg',
               title: 'Air Pods',
-              price: 85,
+              priceCents: 85,
+              rating: {
+                stars: 4.5,
+                count: 56
+              },
               categories: 5
               
   },

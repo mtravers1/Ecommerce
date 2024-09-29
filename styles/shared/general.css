@@ -4,7 +4,8 @@ body {
   /* The <body> element has a default margin of 8px
      on all sides. This removes the default margins. */
   margin: 0;
-  background: linear-gradient(0.5turn, #4A4A4A,  #898888, #FEFAFA );
+  /* background: linear-gradient(0.5turn, #4A4A4A,  #898888, #FEFAFA ); */
+  background-color: beige;
 }
 
 /* <p> elements have a default margin on the top

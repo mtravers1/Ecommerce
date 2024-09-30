@@ -23,7 +23,7 @@
     <body>
         <div id="mobile">
             <div >
-              <button id="navbutton">Ecommerce</button>
+              <button onclick="navtoggle()" id="navbutton">Ecommerce</button>
               <div id="mobilenav"></div>
   
             </div>
@@ -142,13 +142,24 @@
         
     </div>
     <div>
-      <button  id="catbutton">categories</button ><button onClick="showOrHide()">X</button>
-      <div >
-
+      <button onClick="showOrHide()" id="catbutton">categories</button>
       </div>
-      <div id="cate">
+<div>
+  <div id="cate">
 
-      </div>
+  </div>
+</div>
+<script>
+   var i = document.getElementById("mobilenav");
+
+function navtoggle() {
+if (i.style.display === "none") {
+i.style.display = "block";
+} else {
+i.style.display = "none";
+}
+}
+</script>
       <script>
       let nav=document.querySelector('#navbutton')
       nav.addEventListener('click', ()=>{
@@ -172,28 +183,28 @@
         `
       })
     </script>
-      </script>
       <script>
         let toggle=false
-        const dib=document.querySelector('#cate')
 
+        // dib.style.dislay==='block'
+        var x = document.getElementById("cate");
 
-let showOrHide=()=>{
-  if(toggle){
-    dib.style.dislay='block'
-    toggle=false
+        function showOrHide() {
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
-  else{
-    dib.style.display='none'
-    toggle=true
-  }
-  console.log(toggle)
 }
       </script>
       <script>          
-      
+      var y=document.querySelector('#cate')
         document.querySelector('#catbutton').addEventListener('click',()=>{
-          const dib=document.querySelector('#cate')
+          if(y.style.display==='none'){
+            y.style.display==='block'
+          }else{
+            y.style.display==='none'
+          }
           
 
           const filters = [...new Set(btns.map((btn)=>
